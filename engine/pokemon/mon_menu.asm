@@ -383,8 +383,8 @@ GiveTakeItemMenuData:
 .Items:
 	db STATICMENU_CURSOR ; flags
 	db 2 ; # items
-	db "GIVE@"
-	db "TAKE@"
+	db "Give@"
+	db "Take@"
 
 PokemonSwapItemText:
 	text_far _PokemonSwapItemText
@@ -552,9 +552,9 @@ MonMailAction:
 .MenuData:
 	db STATICMENU_CURSOR ; flags
 	db 3 ; items
-	db "READ@"
-	db "TAKE@"
-	db "QUIT@"
+	db "Read@"
+	db "Take@"
+	db "Quit@"
 
 .MailLoseMessageText:
 	text_far _MailLoseMessageText
@@ -908,7 +908,7 @@ MoveScreenLoop:
 .moving_move
 	ld a, " "
 	hlcoord 1, 11
-	ld bc, 5
+	ld bc, 8
 	call ByteFill
 	hlcoord 1, 12
 	lb bc, 5, SCREEN_WIDTH - 2
@@ -1190,7 +1190,15 @@ PlaceMoveData:
 	call PlaceString
 	ld a, [wCurSpecies]
 	ld b, a
-	hlcoord 2, 12
+	farcall GetMoveCategoryName
+	hlcoord 1, 11
+	ld de, wStringBuffer1
+	call PlaceString
+	ld a, [wCurSpecies]
+	ld b, a
+	hlcoord 1, 12
+	ld [hl], "/"
+	inc hl
 	predef PrintMoveType
 	ld a, [wCurSpecies]
 	dec a
@@ -1220,11 +1228,11 @@ PlaceMoveData:
 	ret
 
 String_MoveType_Top:
-	db "┌─────┐@"
+	db "┌────────┐@"
 String_MoveType_Bottom:
-	db "│TYPE/└@"
+	db "│        └@"
 String_MoveAtk:
-	db "ATK/@"
+	db "Atk/@"
 String_MoveNoPower:
 	db "---@"
 

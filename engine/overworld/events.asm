@@ -147,10 +147,7 @@ HandleMap:
 	ld a, [wMapStatus]
 	cp MAPSTATUS_HANDLE
 	ret nz
-	call DoBackgroundEvents
 
-; fallthrough
-DoBackgroundEvents:
 	call HandleMapObjects
 	call NextOverworldFrame
 	call HandleMapBackground

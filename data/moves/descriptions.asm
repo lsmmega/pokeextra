@@ -321,7 +321,7 @@ RazorWindDescription:
 
 SwordsDanceDescription:
 	db   "A dance that in-"
-	next "creases ATTACK.@"
+	next "creases Attack.@"
 
 CutDescription:
 	db   "Cuts using claws,"
@@ -421,7 +421,7 @@ DoubleEdgeDescription:
 
 TailWhipDescription:
 	db   "Lowers the foe's"
-	next "DEFENSE.@"
+	next "Defense.@"
 
 PoisonStingDescription:
 	db   "An attack that may"
@@ -437,7 +437,7 @@ PinMissileDescription:
 
 LeerDescription:
 	db   "Reduces the foe's"
-	next "DEFENSE.@"
+	next "Defense.@"
 
 BiteDescription:
 	db   "An attack that may"
@@ -445,7 +445,7 @@ BiteDescription:
 
 GrowlDescription:
 	db   "Reduces the foe's"
-	next "ATTACK.@"
+	next "Attack.@"
 
 RoarDescription:
 	db   "Scares wild foes"
@@ -469,7 +469,7 @@ DisableDescription:
 
 AcidDescription:
 	db   "An attack that may"
-	next "lower DEFENSE.@"
+	next "lower Defense.@"
 
 EmberDescription:
 	db   "An attack that may"
@@ -513,7 +513,7 @@ BubblebeamDescription:
 
 AuroraBeamDescription:
 	db   "An attack that may"
-	next "lower ATTACK.@"
+	next "lower Attack.@"
 
 HyperBeamDescription:
 	db   "1st turn: Attack"
@@ -560,8 +560,8 @@ LeechSeedDescription:
 	next "foe on every turn.@"
 
 GrowthDescription:
-	db   "Raises the SPCL."
-	next "ATK rating.@"
+	db   "Raises the Spec."
+	next "Atk rating.@"
 
 RazorLeafDescription:
 	db   "Has a high criti-"
@@ -641,7 +641,7 @@ ConfusionDescription:
 
 PsychicMDescription:
 	db   "An attack that may"
-	next "lower SPCL.DEF.@"
+	next "lower Spec.Def.@"
 
 HypnosisDescription:
 	db   "May put the foe to"
@@ -649,7 +649,7 @@ HypnosisDescription:
 
 MeditateDescription:
 	db   "Raises the user's"
-	next "ATTACK.@"
+	next "Attack.@"
 
 AgilityDescription:
 	db   "Sharply increases"
@@ -660,7 +660,7 @@ QuickAttackDescription:
 	next "in the first hit.@"
 
 RageDescription:
-	db   "Raises ATTACK if"
+	db   "Raises Attack if"
 	next "the user is hit.@"
 
 TeleportDescription:
@@ -677,7 +677,7 @@ MimicDescription:
 
 ScreechDescription:
 	db   "Sharply reduces"
-	next "the foe's DEFENSE.@"
+	next "the foe's Defense.@"
 
 DoubleTeamDescription:
 	db   "Heightens evasive-"
@@ -689,7 +689,7 @@ RecoverDescription:
 
 HardenDescription:
 	db   "Raises the user's"
-	next "DEFENSE.@"
+	next "Defense.@"
 
 MinimizeDescription:
 	db   "Heightens evasive-"
@@ -705,18 +705,18 @@ ConfuseRayDescription:
 
 WithdrawDescription:
 	db   "Heightens the"
-	next "user's DEFENSE.@"
+	next "user's Defense.@"
 
 DefenseCurlDescription:
 	db   "Heightens the"
-	next "user's DEFENSE.@"
+	next "user's Defense.@"
 
 BarrierDescription:
 	db   "Sharply increases"
-	next "user's DEFENSE.@"
+	next "user's Defense.@"
 
 LightScreenDescription:
-	db   "Ups SPCL.DEF with"
+	db   "Ups Spec.DEF with"
 	next "a wall of light.@"
 
 HazeDescription:
@@ -724,7 +724,7 @@ HazeDescription:
 	next "stat changes.@"
 
 ReflectDescription:
-	db   "Raises DEFENSE"
+	db   "Raises Defense"
 	next "with a barrier.@"
 
 FocusEnergyDescription:
@@ -797,7 +797,7 @@ ConstrictDescription:
 
 AmnesiaDescription:
 	db   "Sharply raises the"
-	next "user's SPCL.DEF.@"
+	next "user's Spec.Def.@"
 
 KinesisDescription:
 	db   "Reduces the foe's"
@@ -869,7 +869,7 @@ SplashDescription:
 
 AcidArmorDescription:
 	db   "Sharply raises the"
-	next "user's DEFENSE.@"
+	next "user's Defense.@"
 
 CrabhammerDescription:
 	db   "Has a high criti-"
@@ -901,7 +901,7 @@ HyperFangDescription:
 
 SharpenDescription:
 	db   "A move that raises"
-	next "the user's ATTACK.@"
+	next "the user's Attack.@"
 
 ConversionDescription:
 	db   "Change user's type"
@@ -1013,7 +1013,7 @@ SweetKissDescription:
 
 BellyDrumDescription:
 	db   "Reduces own HP to"
-	next "maximize ATTACK.@"
+	next "maximize Attack.@"
 
 SludgeBombDescription:
 	db   "An attack that may"
@@ -1081,7 +1081,7 @@ EndureDescription:
 
 CharmDescription:
 	db   "Sharply lowers the"
-	next "foe's ATTACK.@"
+	next "foe's Attack.@"
 
 RolloutDescription:
 	db   "Attacks 5 turns"
@@ -1093,7 +1093,7 @@ FalseSwipeDescription:
 
 SwaggerDescription:
 	db   "Causes confusion"
-	next "and raises ATTACK.@"
+	next "and raises Attack.@"
 
 MilkDrinkDescription:
 	db   "Restores HP by 1/2"
@@ -1189,11 +1189,11 @@ SweetScentDescription:
 
 IronTailDescription:
 	db   "An attack that may"
-	next "reduce DEFENSE.@"
+	next "reduce Defense.@"
 
 MetalClawDescription:
 	db   "An attack that may"
-	next "up user's ATTACK.@"
+	next "up user's Attack.@"
 
 VitalThrowDescription:
 	db   "A 2nd-strike move"
@@ -1233,11 +1233,11 @@ SunnyDayDescription:
 
 CrunchDescription:
 	db   "An attack that may"
-	next "lower SPCL.DEF.@"
+	next "lower Spec.Def.@"
 
 MirrorCoatDescription:
-	db   "Counters a SPCL."
-	next "ATK move double.@"
+	db   "Counters a Spec."
+	next "Atk move double.@"
 
 PsychUpDescription:
 	db   "Copies the foe's"
@@ -1253,7 +1253,7 @@ AncientpowerDescription:
 
 ShadowBallDescription:
 	db   "An attack that may"
-	next "lower SPCL.DEF.@"
+	next "lower Spec.Def.@"
 
 FutureSightDescription:
 	db   "An attack that"
@@ -1261,7 +1261,7 @@ FutureSightDescription:
 
 RockSmashDescription:
 	db   "An attack that may"
-	next "lower DEFENSE.@"
+	next "lower Defense.@"
 
 WhirlpoolDescription:
 	db   "Traps the foe for"

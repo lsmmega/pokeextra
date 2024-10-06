@@ -5689,20 +5689,14 @@ MoveInfoBox:
 	ld [wStringBuffer1], a
 	call .PrintPP
 
-	farcall UpdateMoveData
-	ld a, [wPlayerMoveStruct + MOVE_ANIM]
-	ld b, a
-	farcall GetMoveCategoryName
 	hlcoord 1, 9
-	ld de, wStringBuffer1
+	ld de, .Type
 	call PlaceString
 
 	hlcoord 7, 11
-	
-	ld h, b
-	ld l, c
 	ld [hl], "/"
 
+	callfar UpdateMoveData
 	ld a, [wPlayerMoveStruct + MOVE_ANIM]
 	ld b, a
 	hlcoord 2, 10
@@ -5713,6 +5707,8 @@ MoveInfoBox:
 
 .Disabled:
 	db "Disabled!@"
+.Type:
+	db "Type/@"
 
 .PrintPP:
 	hlcoord 5, 11
@@ -7579,7 +7575,7 @@ AnimateExpBar:
 	inc b
 	push bc
 	push de
-	hlcoord 17, 11
+	hlcoord 10, 11
 	call PlaceExpBar
 	pop de
 	ld a, $1
@@ -7595,7 +7591,7 @@ AnimateExpBar:
 	inc b
 	push bc
 	push de
-	hlcoord 17, 11
+	hlcoord 10, 11
 	call PlaceExpBar
 	pop de
 	ld a, $1
@@ -7817,8 +7813,6 @@ FillInExpBar:
 	push hl
 	call CalcExpBar
 	pop hl
-	ld de, 7
-	add hl, de
 	jp PlaceExpBar
 
 CalcExpBar:
@@ -7928,7 +7922,7 @@ PlaceExpBar:
 	jr c, .next
 	ld b, a
 	ld a, $6a ; full bar
-	ld [hld], a
+	ld [hli], a
 	dec c
 	jr z, .finish
 	jr .loop1
@@ -7943,7 +7937,7 @@ PlaceExpBar:
 	ld a, $62 ; empty bar
 
 .skip
-	ld [hld], a
+	ld [hli], a
 	ld a, $62 ; empty bar
 	dec c
 	jr nz, .loop2
@@ -8429,11 +8423,11 @@ DisplayLinkBattleResult:
 	ret
 
 .YouWin:
-	db "YOU WIN@"
+	db "You Win@"
 .YouLose:
-	db "YOU LOSE@"
+	db "You Lose@"
 .Draw:
-	db "  DRAW@"
+	db "  Draw@"
 
 .Mobile_InvalidBattle:
 	hlcoord 6, 8
@@ -8445,7 +8439,7 @@ DisplayLinkBattleResult:
 	ret
 
 .InvalidBattle:
-	db "INVALID BATTLE@"
+	db "Invalid Battle@"
 
 IsMobileBattle2:
 	ld a, [wLinkMode]
@@ -8597,11 +8591,11 @@ ReadAndPrintLinkBattleRecord:
 	db "  ---  <LF>"
 	db "         -    -    -@"
 .Record:
-	db "<PLAYER>'s RECORD@"
+	db "<PLAYER>'s Record@"
 .Result:
-	db "RESULT WIN LOSE DRAW@"
+	db "Result Win Lose Draw@"
 .Total:
-	db "TOTAL  WIN LOSE DRAW@"
+	db "Total  Win Lose Draw@"
 
 BattleEnd_HandleRoamMons:
 	ld a, [wBattleType]

@@ -105,7 +105,7 @@ _BoostedExpPointsText::
 	line "a boosted"
 	cont "@"
 	text_decimal wStringBuffer2, 2, 4
-	text " EXP. Points!"
+	text " Exp. Points!"
 	prompt
 
 _ExpPointsText::
@@ -113,7 +113,7 @@ _ExpPointsText::
 	text_start
 	line "@"
 	text_decimal wStringBuffer2, 2, 4
-	text " EXP. Points!"
+	text " Exp. Points!"
 	prompt
 
 _GoMonText::

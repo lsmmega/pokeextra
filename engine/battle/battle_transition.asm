@@ -282,7 +282,7 @@ StartTrainerBattle_Flash:
 	ld hl, .pals
 	add hl, de
 	ld a, [hl]
-	cp 0
+	cp %00000001
 	jr z, .done
 	ld [wBGP], a
 	call DmgToCgbBGPals
@@ -302,7 +302,13 @@ StartTrainerBattle_Flash:
 	dc 3, 3, 3, 2
 	dc 3, 3, 2, 1
 	dc 3, 2, 1, 0
+	dc 2, 1, 0, 0
+	dc 1, 0, 0, 0
 	dc 0, 0, 0, 0
+	dc 1, 0, 0, 0
+	dc 2, 1, 0, 0
+	dc 3, 2, 1, 0
+	dc 0, 0, 0, 1
 
 StartTrainerBattle_SetUpForWavyOutro:
 	vc_hook Stop_reducing_battle_transition_flashing_WavyOutro

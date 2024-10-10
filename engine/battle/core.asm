@@ -7568,7 +7568,6 @@ AnimateExpBar:
 	ret
 
 .LoopBarAnimation:
-	ld d, 3
 	dec b
 .anim_loop
 	inc b
@@ -7579,35 +7578,14 @@ AnimateExpBar:
 	pop de
 	ld a, $1
 	ldh [hBGMapMode], a
-	ld c, d
-	call DelayFrames
+	ldh [hBGMapThird], a
+	call DelayFrame
 	xor a
 	ldh [hBGMapMode], a
-	pop bc
-	ld a, c
-	cp b
-	jr z, .end_animation
-	inc b
-	push bc
-	push de
-	hlcoord 10, 11
-	call PlaceExpBar
-	pop de
-	ld a, $1
-	ldh [hBGMapMode], a
-	ld c, d
-	call DelayFrames
-	xor a
-	ldh [hBGMapMode], a
-	dec d
-	jr nz, .min_number_of_frames
-	ld d, 1
-.min_number_of_frames
 	pop bc
 	ld a, c
 	cp b
 	jr nz, .anim_loop
-.end_animation
 	ld a, $1
 	ldh [hBGMapMode], a
 	ret
